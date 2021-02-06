@@ -1,6 +1,6 @@
 package com.example;
 
-public class Triangle {
+public class Triangle implements Shape{
     public void draw(){
         System.out.println("Triangle drawn");
     }
