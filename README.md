@@ -22,3 +22,11 @@ requirements to this factory and this factory might have some configuration file
 the object asked by A and it will return the object asked.
 6.All this is taken care by spring library,that is we can use Bean Factory and can supply spring XML file as a configuration file.
 
+Bean Factory
+1.Object that can be used to asked for beans from spring. 
+2.It news a configuration file, XML(in our case) that basically provides the reference of Blue-print for Beans to be supplied.
+3.Now depricated.
+
+Application Content
+1.Similar to Bean Factory another Object Application Context, It can do what Bean Factory does plus some additional things also.
+2.Additional things like AOP,event notification

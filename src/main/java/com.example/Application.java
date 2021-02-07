@@ -14,8 +14,12 @@ public class Application {
 //        myShape.setShape(new Circle());
 //        myShape.draw();
 
-        BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("spring.xml"));
-        Triangle triangle = (Triangle) beanFactory.getBean("triangle");
+//        BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("spring.xml"));
+//        Triangle triangle = (Triangle) beanFactory.getBean("triangle");
+//        triangle.draw();
+
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        Triangle triangle = (Triangle) context.getBean("triangle");
         triangle.draw();
     }
 }
