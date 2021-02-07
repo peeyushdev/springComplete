@@ -43,3 +43,4 @@ Constructor Injection
 2.But this leads to serious problem that can come in case we have two Contructors one with string and other with int.
 3.Then how spring will get to know which constructor it should call.
 4.One of the way is to use type="" and pass dataType
+5.index attribute-> assign property value to property at that index in construction declaration.
