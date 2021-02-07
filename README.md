@@ -67,6 +67,7 @@ Autowiring
 Bean Scopes
 1.SingleTon(default)-> When the applicationContext gets initialise at that time only, spring reads the configuration file,
 So in this, spring creates the object for every bean defined in config file and supply that object for all future request.
+    One object per container(applicationContext)
 2.Prototype-> for every request/reference new bean is created.
 3.web-aware->
     a. request->new for every request.
