@@ -47,3 +47,6 @@ Constructor Injection
 
 Object Injection
 1.We can use the attribute ref to declare a reference to a bean inside other bean.
+
+Inner Beans
+1.If we know some beans are needed for one of the bean so instead of having a sperate bean we can have inner beans also.
