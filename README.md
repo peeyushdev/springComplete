@@ -50,3 +50,16 @@ Object Injection
 
 Inner Beans
 1.If we know some beans are needed for one of the bean so instead of having a sperate bean we can have inner beans also.
+
+Collection Injection
+1.Spring provides supports for Collection injection.
+2.we can use list,set,map elements to specify the collection objects.
+3.Type-conversion takes place here also.
+
+Autowiring
+1.Spring helps in injecting the data members of a class using element autowire.
+2.Three ways in which we can autowire
+    a.byName in which spring of bean with name as the data member name.
+    b.byType in which bean with is search with the type required, but works only if we have one for bean for the required type.
+        otherwise exception saying no qualifying bean found, required 1 found 3.(in out example).
+    c.constructor works exactly same as byType instead of using setter injection uses construction injection.     
