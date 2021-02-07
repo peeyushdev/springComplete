@@ -19,7 +19,10 @@ public class Application {
 //        triangle.draw();
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+//        Triangle triangle = (Triangle) context.getBean("triangle-alias");
+//        Triangle triangle = (Triangle) context.getBean("triangle-name");
         Triangle triangle = (Triangle) context.getBean("triangle");
+
         triangle.draw();
     }
 }
