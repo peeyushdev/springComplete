@@ -72,4 +72,10 @@ So in this, spring creates the object for every bean defined in config file and 
 3.web-aware->
     a. request->new for every request.
     b. session->new for every session.
-    c. global session.        
+    c. global session.     
+
+Aware Interfaces
+1.ApplicationContextAware-> while initialization, checks for the bean that implement this interface and calls its setter to 
+set the ApplicationContext.
+2.BeanNameAware-> name of the bean       
+many more are there.
