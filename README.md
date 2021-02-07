@@ -30,3 +30,7 @@ Bean Factory
 Application Content
 1.Similar to Bean Factory another Object Application Context, It can do what Bean Factory does plus some additional things also.
 2.Additional things like AOP,event notification
+
+Property Tag<property name="" value="">
+1.sets the property of the bean.
+2.it uses the setter method for the property to set.
