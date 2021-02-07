@@ -31,6 +31,15 @@ Application Content
 1.Similar to Bean Factory another Object Application Context, It can do what Bean Factory does plus some additional things also.
 2.Additional things like AOP,event notification
 
+
+Setter Injection
 Property Tag<property name="" value="">
 1.sets the property of the bean.
 2.it uses the setter method for the property to set.
+
+Constructor Injection
+<Constructor-arg value="">
+1.In value we pass string but spring intelligently converts it to required type.
+2.But this leads to serious problem that can come in case we have two Contructors one with string and other with int.
+3.Then how spring will get to know which constructor it should call.
+4.One of the way is to use type="" and pass dataType
