@@ -9,10 +9,27 @@
         http://www.springframework.org/schema/context/spring-context.xsd"
        default-init-method="myInit" default-destroy-method="myDestroy">
     <bean id="triangle" class="com.example.Triangle">
-<!--        <property name="type" value="Equilateral"></property>-->
-<!--        <constructor-arg value="Equilateral"/>-->
-<!--        <constructor-arg type="int" value="20"/>-->
-        <constructor-arg index="1" value="20"/>
-        <constructor-arg index="0" value="Equilateral"/>
+        <!--        <property name="type" value="Equilateral"></property>-->
+        <!--        <constructor-arg value="Equilateral"/>-->
+        <!--        <constructor-arg type="int" value="20"/>-->
+        <!--        <constructor-arg index="1" value="20"/>-->
+        <!--        <constructor-arg index="0" value="Equilateral"/>-->
+        <property name="pointA" ref="point1"/>
+        <property name="pointB" ref="point2"/>
+        <property name="pointC" ref="point3"/>
+    </bean>
+
+
+    <bean id="point1" class="com.example.Point">
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+    <bean id="point2" class="com.example.Point">
+        <property name="x" value="20"/>
+        <property name="y" value="0"/>
+    </bean>
+    <bean id="point3" class="com.example.Point">
+        <property name="x" value="0"/>
+        <property name="y" value="-20"/>
     </bean>
 </beans>

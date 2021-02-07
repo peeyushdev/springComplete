@@ -44,3 +44,6 @@ Constructor Injection
 3.Then how spring will get to know which constructor it should call.
 4.One of the way is to use type="" and pass dataType
 5.index attribute-> assign property value to property at that index in construction declaration.
+
+Object Injection
+1.We can use the attribute ref to declare a reference to a bean inside other bean.
