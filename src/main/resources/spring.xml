@@ -10,7 +10,7 @@
        default-init-method="myInit" default-destroy-method="myDestroy">
     <bean id="triangle" class="com.example.Triangle">
 <!--        <property name="type" value="Equilateral"></property>-->
-        <constructor-arg value="Equilateral"/>
-        <constructor-arg value="20"/>
+<!--        <constructor-arg value="Equilateral"/>-->
+        <constructor-arg type="int" value="20"/>
     </bean>
 </beans>

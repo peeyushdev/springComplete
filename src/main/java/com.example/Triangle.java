@@ -4,6 +4,9 @@ public class Triangle implements Shape{
     String type;
     int height;
 
+    public Triangle(int height) {
+        this.height = height;
+    }
     public Triangle(String type) {
         this.type = type;
     }
@@ -13,9 +16,6 @@ public class Triangle implements Shape{
         this.height = height;
     }
 
-    public Triangle(int height) {
-        this.height = height;
-    }
 
     public String getType() {
         return type;
