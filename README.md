@@ -62,4 +62,13 @@ Autowiring
     a.byName in which spring of bean with name as the data member name.
     b.byType in which bean with is search with the type required, but works only if we have one for bean for the required type.
         otherwise exception saying no qualifying bean found, required 1 found 3.(in out example).
-    c.constructor works exactly same as byType instead of using setter injection uses construction injection.     
+    c.constructor works exactly same as byType instead of using setter injection uses construction injection. 
+    
+Bean Scopes
+1.SingleTon(default)-> When the applicationContext gets initialise at that time only, spring reads the configuration file,
+So in this, spring creates the object for every bean defined in config file and supply that object for all future request.
+2.Prototype-> for every request/reference new bean is created.
+3.web-aware->
+    a. request->new for every request.
+    b. session->new for every session.
+    c. global session.        
