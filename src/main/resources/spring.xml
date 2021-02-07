@@ -8,5 +8,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd"
        default-init-method="myInit" default-destroy-method="myDestroy">
-    <bean id="triangle" class="com.example.Triangle"/>
+    <bean id="triangle" class="com.example.Triangle">
+        <property name="type" value="Equilateral"></property>
+    </bean>
 </beans>
