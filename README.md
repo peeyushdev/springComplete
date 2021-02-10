@@ -79,3 +79,9 @@ Aware Interfaces
 set the ApplicationContext.
 2.BeanNameAware-> name of the bean       
 many more are there.
+
+Bean Definition Inheritance
+1.When we have lots of bean definition inside our XML file, and we have some common property across many beans
+then instead of writing those properties seperately inside every bean definition what we can do is to have one common
+bean for all those properties and inherit this in other beans
+2.This bean can be a abstract bean also

@@ -8,9 +8,18 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd"
        default-init-method="myInit" default-destroy-method="myDestroy">
-    <bean id="triangle" class="com.example.Triangle" name="triangle-name" autowire="byName">
+    <bean id="triangleN" class="com.example.Triangle" name="triangle-name" autowire="byName">
     </bean>
 
+    <bean id="triangle1" class="com.example.Triangle">
+        <property name="pointA"  ref="pointA" />
+    </bean>
+
+    <bean id="triangle" class="com.example.Triangle" parent="triangle1">
+        <property name="pointB" ref="pointB" />
+        <property name="pointC" ref="pointC" />
+
+    </bean>
     <bean id="pointA" class="com.example.Point">
         <property name="x" value="0"/>
         <property name="y" value="0"/>
