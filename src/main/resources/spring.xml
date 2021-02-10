@@ -8,6 +8,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd"
        default-init-method="myInit" default-destroy-method="myDestroy">
+<!--    above default-init-method and default-destroy-method call will be ignored for beans which doesn't have these method-->
     <bean id="triangleN" class="com.example.Triangle" name="triangle-name" autowire="byName" abstract="true">
     </bean>
 
@@ -15,7 +16,7 @@
         <property name="pointA" ref="pointA"/>
     </bean>
     <!--init-method and destroy-method should exists in bean otherwise error will come-->
-    <bean id="triangle" class="com.example.Triangle" parent="triangle1" init-method="myInit" destroy-method="myDestroy">
+    <bean id="triangle" class="com.example.Triangle" parent="triangle1">
         <property name="pointB" ref="pointB"/>
         <property name="pointC" ref="pointC"/>
 
