@@ -93,4 +93,13 @@ bean and before the bean is being destroyed.
     a. Implement DisposableBean,InitializingBean
     b. adding directly to xml file
         here we can add at global level also, if that bean has that function it will get execute otherwise gets ignored.
-3.But the interface takes the priority in order.        
+3.But the interface takes the priority in order.
+
+BeanPostProcessor
+1.This is used to extend the capabilities of the spring, we can specify what should be done before and after initialization
+of the bean property.
+2.To inform spring about this,we need to create its bean in the xml file.
+3.We can any number of BeanPostProcessor class and all them gets execute.
+4.These will get execute for all the beans present in the xml file.
+
+        

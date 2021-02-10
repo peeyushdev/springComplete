@@ -35,7 +35,8 @@
         <property name="x" value="0"/>
         <property name="y" value="-20"/>
     </bean>
-
+    <bean class="com.example.DisplayNameBeanPostProcessor"/>
+    <bean class="com.example.DisplayNameBeanPostProcessor1"/>
 
     <alias name="triangle" alias="triangle-alias"/>
 </beans>
