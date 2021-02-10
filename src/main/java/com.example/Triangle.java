@@ -3,10 +3,12 @@ package com.example;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Triangle implements Shape, ApplicationContextAware, BeanNameAware {
+public class Triangle implements Shape, DisposableBean, InitializingBean {
 
     Point pointA;
     Point pointB;
@@ -43,11 +45,12 @@ public class Triangle implements Shape, ApplicationContextAware, BeanNameAware {
         System.out.println("PointC = ("+getPointC().getX()+","+pointC.getY()+")");
     }
 
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("setApplicationContext called"+applicationContext);
+
+    public void destroy() throws Exception {
+        System.out.println("DisposableBean destroy called on triangle");
     }
 
-    public void setBeanName(String s) {
-        System.out.println("setBeanName called"+s);
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("InitializingBean init called on triangle");
     }
 }

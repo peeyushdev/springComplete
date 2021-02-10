@@ -84,4 +84,13 @@ Bean Definition Inheritance
 1.When we have lots of bean definition inside our XML file, and we have some common property across many beans
 then instead of writing those properties seperately inside every bean definition what we can do is to have one common
 bean for all those properties and inherit this in other beans
-2.This bean can be a abstract bean also
+2.This bean can be a abstract bean.
+
+Bean LifeCycle Callbacks
+1.There are callback methods which we can use to tell spring to perform some operation at the time of initializing the 
+bean and before the bean is being destroyed.
+2.There are two ways of doing this
+    a. Implement DisposableBean,InitializingBean
+    b. adding directly to xml file
+        here we can add at global level also, if that bean has that function it will get execute otherwise gets ignored.
+        
