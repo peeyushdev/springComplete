@@ -8,7 +8,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Triangle implements Shape, DisposableBean, InitializingBean {
+public class Triangle implements Shape {
 
     Point pointA;
     Point pointB;
@@ -46,11 +46,19 @@ public class Triangle implements Shape, DisposableBean, InitializingBean {
     }
 
 
-    public void destroy() throws Exception {
-        System.out.println("DisposableBean destroy called on triangle");
-    }
+//    public void destroy() throws Exception {
+//        System.out.println("DisposableBean destroy called on triangle");
+//    }
+//
+//    public void afterPropertiesSet() throws Exception {
+//        System.out.println("InitializingBean init called on triangle");
+//    }
 
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("InitializingBean init called on triangle");
+
+    public void myInit(){
+        System.out.println("myInit called on triangle");
+    }
+    public void myDestroy(){
+        System.out.println("myDestroy called on triangle");
     }
 }

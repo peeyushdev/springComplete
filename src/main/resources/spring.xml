@@ -12,12 +12,12 @@
     </bean>
 
     <bean id="triangle1" class="com.example.Triangle" abstract="true">
-        <property name="pointA"  ref="pointA" />
+        <property name="pointA" ref="pointA"/>
     </bean>
-
-    <bean id="triangle" class="com.example.Triangle" parent="triangle1">
-        <property name="pointB" ref="pointB" />
-        <property name="pointC" ref="pointC" />
+    <!--init-method and destroy-method should exists in bean otherwise error will come-->
+    <bean id="triangle" class="com.example.Triangle" parent="triangle1" init-method="myInit" destroy-method="myDestroy">
+        <property name="pointB" ref="pointB"/>
+        <property name="pointC" ref="pointC"/>
 
     </bean>
     <bean id="pointA" class="com.example.Point">
@@ -36,5 +36,5 @@
     </bean>
 
 
-    <alias name="triangle" alias="triangle-alias" />
+    <alias name="triangle" alias="triangle-alias"/>
 </beans>

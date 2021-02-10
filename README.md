@@ -93,4 +93,4 @@ bean and before the bean is being destroyed.
     a. Implement DisposableBean,InitializingBean
     b. adding directly to xml file
         here we can add at global level also, if that bean has that function it will get execute otherwise gets ignored.
-        
+3.But the interface takes the priority in order.        
