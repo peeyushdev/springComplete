@@ -102,4 +102,8 @@ of the bean property.
 3.We can any number of BeanPostProcessor class and all them gets execute.
 4.These will get execute for all the beans present in the xml file.
 
+BeanFactoryPostProcessor
+1.Similar to BeanPostProcessor, BFPP is called after the Bean Factory is created.
+2.Before the initailization of BF this method is called.
+3.One of the Example is -> propertyplaceholderconfigurer
         
