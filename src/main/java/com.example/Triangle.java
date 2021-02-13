@@ -40,6 +40,7 @@ public class Triangle implements Shape {
 
 
     public void draw() {
+        System.out.println("Triangle Drawn");
         System.out.println("PointA = ("+getPointA().getX()+","+pointA.getY()+")");
         System.out.println("PointB = ("+getPointB().getX()+","+pointB.getY()+")");
         System.out.println("PointC = ("+getPointC().getX()+","+pointC.getY()+")");
@@ -54,11 +55,4 @@ public class Triangle implements Shape {
 //        System.out.println("InitializingBean init called on triangle");
 //    }
 
-
-    public void myInit(){
-        System.out.println("myInit called on triangle");
-    }
-    public void myDestroy(){
-        System.out.println("myDestroy called on triangle");
-    }
 }

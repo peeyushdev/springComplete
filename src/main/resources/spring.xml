@@ -6,8 +6,7 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd"
-       default-init-method="myInit" default-destroy-method="myDestroy">
+        http://www.springframework.org/schema/context/spring-context.xsd">
 <!--    above default-init-method and default-destroy-method call will be ignored for beans which doesn't have these method-->
     <bean id="triangleN" class="com.example.Triangle" name="triangle-name" autowire="byName" abstract="true">
     </bean>
@@ -22,8 +21,8 @@
 
     </bean>
     <bean id="pointA" class="com.example.Point">
-        <property name="x" value="${pointA.X}"/>
-        <property name="y" value="${pointA.Y}"/>
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
     </bean>
 
     <bean id="pointB" class="com.example.Point">
@@ -35,14 +34,8 @@
         <property name="x" value="0"/>
         <property name="y" value="-20"/>
     </bean>
-    <bean class="com.example.DisplayNameBeanPostProcessor"/>
-    <bean class="com.example.DisplayNameBeanPostProcessor1"/>
-
-    <bean class="com.example.DisplaceBeanFactoryPostProcessor" />
-
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations" value="application.properties"/>
+    <bean id="circle" class="com.example.Circle">
+        <property name="center" ref="pointA" />
     </bean>
-
     <alias name="triangle" alias="triangle-alias"/>
 </beans>
