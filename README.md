@@ -106,5 +106,11 @@ BeanFactoryPostProcessor
 1.Similar to BeanPostProcessor, BFPP is called after the Bean Factory is created.
 2.Before the initailization of BF this method is called.
 3.One of the Example is -> propertyplaceholderconfigurer
-    Helps in using placeholder instead of hardcoding the variables/
+    Helps in using placeholder instead of hardcoding the variables
+
+Annotations
+1.@Required-> used to specify when any property of the class is required to be set.    
+    With the help of BeanPostProcessor we are able to achieve this as RequiredAnnotationBeanPostProcessor
+    is responsible for checking Required annotation and if that property is not set then it will throw exception
+    property x of class y is required.
         

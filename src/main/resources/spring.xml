@@ -35,7 +35,8 @@
         <property name="y" value="-20"/>
     </bean>
     <bean id="circle" class="com.example.Circle">
-        <property name="center" ref="pointA" />
+<!--        <property name="center" ref="pointA" />-->
     </bean>
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
     <alias name="triangle" alias="triangle-alias"/>
 </beans>
