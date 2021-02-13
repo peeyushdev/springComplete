@@ -106,4 +106,5 @@ BeanFactoryPostProcessor
 1.Similar to BeanPostProcessor, BFPP is called after the Bean Factory is created.
 2.Before the initailization of BF this method is called.
 3.One of the Example is -> propertyplaceholderconfigurer
+    Helps in using placeholder instead of hardcoding the variables/
         
