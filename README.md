@@ -123,5 +123,11 @@ Annotations
 Note-> Instead of declaring the beans for BeanPostProcessors we can directly use this:
         <context:annotation-config/> 
         this will include all the BeanPostProcessors.    
-     
+
+JSR-250
+1.Standard JSR-> Java Specification Request that defines all the standard annotations.
+    a.@Resource-> similar to @autowire by name,it checks for the name that is passed to it or by default checks for 
+     dependency with same name as variable name.
+    b.PostConstruct-> similar to init method that should execute after the bean is created.
+    c.PreDestroy-> similar to destroy method that should execute before the bean is about to destroy.        
             
