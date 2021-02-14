@@ -23,6 +23,13 @@
         <property name="y" value="-10"/>
     </bean>
 
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>application</value>
+            </list>
+        </property>
+    </bean>
 
 <!--    <alias name="pointA" alias="center"/>-->
     <context:annotation-config/>

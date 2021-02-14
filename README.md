@@ -145,5 +145,11 @@ this using xml approach only.
     All the above acts same to spring it will create the bean for it.
  Note-> but we need to tell spring that apart from the beans that we declare in spring.xml file there are other beans 
  also in the code.
- for that we use component-scan tag in xml.          
-            
+ for that we use component-scan tag in xml.      
+     
+MessageSource
+1.To get the text from the properties file.
+2.We need to declare the ResourceBundleMessageSource bean in the spring.xml
+3.ApplicationContext(Interface) also extends MessageSource(Interface) so we can directly get this using application context
+object also.
+Note-> Make sure to add id=messageSource for the bean, otherwise spring will not able to get the object of(messageSource)           

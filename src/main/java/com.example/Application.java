@@ -9,5 +9,6 @@ public class Application {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         Shape shape = (Shape) context.getBean("circle");
         shape.draw();
+        System.out.println(context.getMessage("drawing.circle",null,null));
     }
 }
