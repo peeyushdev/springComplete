@@ -129,5 +129,21 @@ JSR-250
     a.@Resource-> similar to @autowire by name,it checks for the name that is passed to it or by default checks for 
      dependency with same name as variable name.
     b.PostConstruct-> similar to init method that should execute after the bean is created.
-    c.PreDestroy-> similar to destroy method that should execute before the bean is about to destroy.        
+    c.PreDestroy-> similar to destroy method that should execute before the bean is about to destroy.
+    
+Component and Streotype Annotations
+1. Instead of defined the class as a bean inside the xml file we can specify that a class is a bean using annotations also.
+Note-> Using annotation we will not be able to declare the multiple instances of a class means we will have only one 
+instance for that bean, so if there is requirement of having more than one instance of a bean then we need to specify
+this using xml approach only.
+
+2.Streotype means there are some annotations that tell spring that these class are mean for some spl functioning.
+    a. @Component->   more generic
+    b. @Service ->    for service layer   
+    c. @Reposotory -> for data object 
+    d. @Controller -> for controller layer
+    All the above acts same to spring it will create the bean for it.
+ Note-> but we need to tell spring that apart from the beans that we declare in spring.xml file there are other beans 
+ also in the code.
+ for that we use component-scan tag in xml.          
             

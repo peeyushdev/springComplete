@@ -23,9 +23,8 @@
         <property name="y" value="-10"/>
     </bean>
 
-    <bean id="circle" class="com.example.Circle">
-    </bean>
 
 <!--    <alias name="pointA" alias="center"/>-->
     <context:annotation-config/>
+    <context:component-scan base-package="com.example"/>
 </beans>
