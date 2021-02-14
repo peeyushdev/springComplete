@@ -113,4 +113,15 @@ Annotations
     With the help of BeanPostProcessor we are able to achieve this as RequiredAnnotationBeanPostProcessor
     is responsible for checking Required annotation and if that property is not set then it will throw exception
     property x of class y is required.
-        
+2.@Autowire-> used to autowire the properties of a some similar to property tag
+    by default it checks for a type of bean, if multiple beans of same type are present then check by the name of the
+    data member.
+    But there is better way that is to supply the qualifier annotation and in xml file for dependency bean add qualifier.
+    If multiple qualifying beans are there for autowiring then exception will be thrown  by spring.
+    one more way is to use the alias tag keeping the value as the name of the dependency.
+
+Note-> Instead of declaring the beans for BeanPostProcessors we can directly use this:
+        <context:annotation-config/> 
+        this will include all the BeanPostProcessors.    
+     
+            
