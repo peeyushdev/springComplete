@@ -152,4 +152,10 @@ MessageSource
 2.We need to declare the ResourceBundleMessageSource bean in the spring.xml
 3.ApplicationContext(Interface) also extends MessageSource(Interface) so we can directly get this using application context
 object also.
-Note-> Make sure to add id=messageSource for the bean, otherwise spring will not able to get the object of(messageSource)           
+Note-> Make sure to add id=messageSource for the bean, otherwise spring will not able to get the object of(messageSource)       
+Point 3 is the advantage of context over BeanFactory.
+
+Event Handling
+1.There are three entities involved in Event Handling 
+    i.e Event Publisher,Event Listener, Event itself.    
+2.ApplicationListener listens to the event published by spring or any custom event publish by user.
